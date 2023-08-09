@@ -34,11 +34,11 @@ public interface FeignClientAssociate
 	@GetMapping("/associate/findassociatebyskillname/{skillname}")
 	public List<Associate> getAssociateBySkill(@PathVariable("skillname") String skillname);
 	@GetMapping("/associate/findassociatebymobilenumber/{mobilenumber}")
-	public List<Associate> getAssociateByMobileNumber(@PathVariable("mobilenumber") String mobilenumber);
+	public Associate getAssociateByMobileNumber(@PathVariable("mobilenumber") String mobilenumber);
 	@GetMapping("/skills/getallskills")
 	List<Skills> getallskills();
 	@GetMapping("/skills/getskillsbyid/{id}")
-	public ResponseEntity<Skills> getskillsbyid(@PathVariable("id") int id);
+	public Skills getskillsbyid(@PathVariable("id") int id);
 	@PostMapping("/skills/createskills")
 	public Skills createSkillsDto(@RequestBody Skills skill);
 	@DeleteMapping("/skills/deleteskills/{id}")

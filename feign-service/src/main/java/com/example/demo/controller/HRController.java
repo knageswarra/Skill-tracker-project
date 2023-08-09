@@ -19,6 +19,7 @@ import com.example.demo.client.FeignClientAssociate;
 import com.example.demo.client.FeignClientHR;
 import com.example.demo.entity.Associate;
 import com.example.demo.entity.HR;
+import com.example.demo.entity.Skills;
 
 import lombok.AllArgsConstructor;
 
@@ -62,15 +63,15 @@ public class HRController {
 		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
 	}
 	@GetMapping("/findassociatebyemail/{email}")
-	public ResponseEntity<Associate> getAssociateByEmail(@PathVariable("email") String email)
+	public Associate getAssociateByEmail(@PathVariable("email") String email)
 	{
 		Associate associate1=associate.getAssociateByEmail(email);
-		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
+		return associate1;
 	}
 	@GetMapping("/findassociatebymobilenumber/{mobilenumber}")
-	public ResponseEntity<List<Associate>> getAssociateByMobileNumber(@PathVariable("mobilenumber") String mobilenumber)
+	public ResponseEntity<Associate> getAssociateByMobileNumber(@PathVariable("mobilenumber") String mobilenumber)
 	{
-		List<Associate> associate1=associate.getAssociateByMobileNumber(mobilenumber);
+		Associate associate1=associate.getAssociateByMobileNumber(mobilenumber);
 		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
 	}
 	@GetMapping("/findassociatebyskillname/{skillname}")
@@ -99,5 +100,30 @@ public class HRController {
 	    	//HR hr = service.getHRById(id);
 	    	return ResponseEntity.status(HttpStatus.ACCEPTED).body(hr.getToDoById(id));
 	 }
+	 @PostMapping("/skills/createskills")
+		public Skills createSkillsDto(@RequestBody Skills skill)
+		{
+		 return associate.createSkillsDto(skill);
+		}
+	 @GetMapping("/skills/getallskills")
+	 public List<Skills> getallskills()
+	 {
+		 return  associate.getallskills();
+	 }
+	@GetMapping("/skills/getskillsbyid/{id}")
+	public Skills getskillsbyid(@PathVariable("id") int id)
+	{
+		return associate.getskillsbyid(id);
+	}
+	@DeleteMapping("/skills/deleteskills/{id}")
+	public String deleteSkillsDto(@PathVariable("id") int id)
+	{
+		return associate.deleteSkillsDto(id);
+	}
+	@PutMapping("/skills/updateskills/{id}")
+	public Skills updateSkillsDto(@PathVariable("id") int id,@RequestBody Skills skill)
+	{
+		return associate.updateSkillsDto(id, skill);
+	}
 
 }
