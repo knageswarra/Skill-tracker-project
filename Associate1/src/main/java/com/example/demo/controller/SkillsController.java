@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.exception.SkillNotCreatedException;
 import com.example.demo.exception.SkillNotFoundException;
+import com.example.demo.model.Associate;
 import com.example.demo.model.Skills;
 import com.example.demo.service.SkillsService;
 
@@ -94,5 +95,11 @@ public class SkillsController {
 		   throw new SkillNotFoundException("skill cannot be found");
 	   }
 	   return service.deleteskills(id);
+   }
+   @PostMapping("/insertassociatedetails/{id}")
+   public Skills insertassociatedetails(@PathVariable("id") int id,@RequestBody Associate associate)
+   {
+	   Skills s=service.insertassociatedetails(id,associate);
+	   return s;
    }
 }

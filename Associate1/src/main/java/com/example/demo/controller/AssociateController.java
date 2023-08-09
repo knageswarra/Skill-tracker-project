@@ -123,5 +123,5 @@ public class AssociateController {
 			throw new AssociateNotFoundException("Associate cannot be found");
 		}
 		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
-	}
+	} 
 }

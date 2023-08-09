@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.example.demo.model.Associate;
 import com.example.demo.model.Skills;
 import com.example.demo.repo.SkillRepository;
 import com.example.demo.service.SkillsService;
@@ -51,6 +52,16 @@ public class SkillServiceImpl implements SkillsService{
 		{repo.delete(k);
 		 s="done";
 		}
+		return s;
+	}
+
+	@Override
+	public Skills insertassociatedetails(int id,Associate associate) {
+		Skills s=repo.findById(id).get();
+	    List<Associate> a=s.getAssociate();
+	    a.add(associate);
+	    s.setAssociate(a);
+	    repo.save(s);
 		return s;
 	}
 

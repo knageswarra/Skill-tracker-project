@@ -38,7 +38,6 @@ public class Skills {
 	private String skillname;
 	private String startdate;
 	private String enddate;
-	@ManyToMany
-	@OnDelete(action=OnDeleteAction.CASCADE)
+	@ManyToMany()
 	public List<Associate> associate;
 }

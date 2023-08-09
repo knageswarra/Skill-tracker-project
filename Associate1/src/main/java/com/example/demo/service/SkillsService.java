@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import java.util.List;
 
+import com.example.demo.model.Associate;
 import com.example.demo.model.Skills;
 
 public interface SkillsService {
@@ -10,4 +11,5 @@ Skills getskillsbyid(int id);
 List<Skills> getallskills();
 Skills updateskill(int id,Skills skill);
 String deleteskills(int id);
+Skills insertassociatedetails(int id, Associate associate);
 }
