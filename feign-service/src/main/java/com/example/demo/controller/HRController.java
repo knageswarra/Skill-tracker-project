@@ -57,9 +57,9 @@ public class HRController {
 		return ResponseEntity.ok(s);
 	}
 	@GetMapping("/findassociatebycountry/{country}")
-	public ResponseEntity<Associate> getAssociateByCountry(@PathVariable("country") String country)
+	public ResponseEntity<List<Associate>> getAssociateByCountry(@PathVariable("country") String country)
 	{
-		Associate associate1=associate.getAssociateByCountry(country);
+		List<Associate> associate1=associate.getAssociateByCountry(country);
 		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
 	}
 	@GetMapping("/findassociatebyemail/{email}")
@@ -130,5 +130,6 @@ public class HRController {
 	{
 		return associate.insertassociatedetails(id, associate1);
 	}
+	
 
 }

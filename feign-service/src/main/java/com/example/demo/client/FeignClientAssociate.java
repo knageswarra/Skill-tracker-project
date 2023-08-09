@@ -28,7 +28,7 @@ public interface FeignClientAssociate
 	@DeleteMapping("/associate/deleteassociate/{id}")
 	public String deleteAssociate(@PathVariable("id") int id);
 	@GetMapping("/associate/findassociatebycountry/{country}")
-	public Associate getAssociateByCountry(@PathVariable String country);
+	public List<Associate> getAssociateByCountry(@PathVariable String country);
 	@GetMapping("/associate/findassociatebyemail/{email}")
 	public Associate getAssociateByEmail(@PathVariable("email") String email);
 	@GetMapping("/associate/findassociatebyskillname/{skillname}")
@@ -47,4 +47,5 @@ public interface FeignClientAssociate
 	public Skills updateSkillsDto(@PathVariable("id") int id,@RequestBody Skills skill);
 	@PostMapping("/insertassociatedetails/{id}")
 	public Skills insertassociatedetails(@PathVariable("id") int id,@RequestBody Associate associate);
+	
 }
