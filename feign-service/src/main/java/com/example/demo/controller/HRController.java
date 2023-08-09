@@ -125,5 +125,10 @@ public class HRController {
 	{
 		return associate.updateSkillsDto(id, skill);
 	}
+	@PostMapping("/insertassociatedetails/{id}")
+	public Skills insertassociatedetails(@PathVariable("id") int id,@RequestBody Associate associate1)
+	{
+		return associate.insertassociatedetails(id, associate1);
+	}
 
 }
