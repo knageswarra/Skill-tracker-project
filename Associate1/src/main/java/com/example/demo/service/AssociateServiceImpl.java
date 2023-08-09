@@ -61,7 +61,7 @@ public class AssociateServiceImpl implements AssociateService{
    }
 
 @Override
-public Associate findbyassociatecountry(String country) {
+public List<Associate> findbyassociatecountry(String country) {
 	// TODO Auto-generated method stub
 	return associaterepo.FindByAssociatecountry(country);
 }
@@ -94,6 +94,7 @@ public List<Associate> FindByAssociateskillname(String skillname) {
 	}
 	return associates;
 }
+
 
 
   

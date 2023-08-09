@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.exception.AssociateNotCreatedException;
 import com.example.demo.exception.AssociateNotFoundException;
 import com.example.demo.model.Associate;
+import com.example.demo.model.Skills;
 import com.example.demo.service.AssociateService;
 
 import lombok.AllArgsConstructor;
@@ -85,9 +86,9 @@ public class AssociateController {
 		return s;
 	}
 	@GetMapping("/findassociatebycountry/{country}")
-	public Associate getAssociateByCountry(@PathVariable("country") String country)
+	public List<Associate> getAssociateByCountry(@PathVariable("country") String country)
 	{
-		Associate associate1=service.findbyassociatecountry(country);
+		List<Associate> associate1=service.findbyassociatecountry(country);
 		if(associate1==null)
 		{
 			throw new AssociateNotFoundException("Associate cannot be found");
@@ -123,5 +124,7 @@ public class AssociateController {
 			throw new AssociateNotFoundException("Associate cannot be found");
 		}
 		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
-	} 
+	}
+	
+	
 }
