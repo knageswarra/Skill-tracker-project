@@ -27,14 +27,14 @@ import lombok.AllArgsConstructor;
 public class SkillsController {
 	private final SkillsService service;
 	@PostMapping("/createskills")
-	public ResponseEntity<Skills> createskills(@RequestBody Skills skill)
+	public Skills createskills(@RequestBody Skills skill)
 	{
 		Skills skills=service.createskill(skill);
 		if(skills==null)
 		{
 			throw new SkillNotCreatedException("Skill cannot be created");
 		}
-		return ResponseEntity.status(HttpStatus.ACCEPTED).body(skills);
+		return skills;
 	}
    @ExceptionHandler
    public ResponseEntity<?> handleException(SkillNotCreatedException e)
@@ -71,9 +71,9 @@ public class SkillsController {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(sb);
    }
    @GetMapping("/getallskills")
-   public ResponseEntity<List<Skills>> getallskills()
+   public List<Skills> getallskills()
    {
-	   return ResponseEntity.status(HttpStatus.FOUND).body(service.getallskills());
+	   return service.getallskills();
    }
    @PutMapping("/updateskills/{id}")
    public Skills updateskills(@PathVariable("id") int id,@RequestBody Skills skill)

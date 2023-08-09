@@ -95,14 +95,14 @@ public class AssociateController {
 		return associate1;
 	}
 	@GetMapping("/findassociatebyemail/{email}")
-	public ResponseEntity<Associate> getAssociateByEmail(@PathVariable("email") String email)
+	public Associate getAssociateByEmail(@PathVariable("email") String email)
 	{
 		Associate associate1=service.FindByAssociateemail(email);
 		if(associate1==null)
 		{
 			throw new AssociateNotFoundException("Associate cannot be found");
 		}
-		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
+		return associate1;
 	}
 	@GetMapping("/findassociatebymobilenumber/{mobilenumber}")
 	public Associate getAssociateByMobileNumber(@PathVariable("mobilenumber") String mobilenumber)
