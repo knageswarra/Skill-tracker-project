@@ -73,5 +73,9 @@ public HR verifyUser(String email, String pass ) {
 	public HR getHRById(int id) {
 		return repo.findById(id);
 	}
+	public void delete(int id)
+	{
+		repo.deleteById(id);
+	}
 	
 }
