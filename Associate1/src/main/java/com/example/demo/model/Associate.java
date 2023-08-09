@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -35,8 +36,10 @@ private String associatefirstname;
 private String associatelastname;
 private String gender;
 private Date dob;
+@Column(unique=true)
 private String associateemail;
 private String associatecountry;
+@Column(unique=true)
 private String associatemobilenumber;
 private String password;
 //private List<Integer> Skillsid;

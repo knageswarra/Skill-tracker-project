@@ -2,6 +2,7 @@ package com.example.demo.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,8 +27,10 @@ public class Associate{
 	private String associatelastname;
 	private String gender;
 	private Date dob;
+	@Column(unique=true)
 	private String associateemail;
 	private String associatecountry;
+	@Column(unique=true)
 	private String associatemobilenumber;
 	private String password;
 }
