@@ -49,14 +49,14 @@ public class SkillsController {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(sb);
    }
    @GetMapping("/getskillsbyid/{id}")
-   public ResponseEntity<Skills> getskillsbyid(@PathVariable("id") int id)
+   public Skills getskillsbyid(@PathVariable("id") int id)
 	{
 		Skills skills=service.getskillsbyid(id);
 		if(skills==null)
 		{
 			throw new SkillNotFoundException("Skill cannot be found");
 		}
-		return ResponseEntity.status(HttpStatus.ACCEPTED).body(skills);
+		return skills;
 	}
    @ExceptionHandler
    public ResponseEntity<?> handleException(SkillNotFoundException e)
@@ -76,23 +76,23 @@ public class SkillsController {
 	   return ResponseEntity.status(HttpStatus.FOUND).body(service.getallskills());
    }
    @PutMapping("/updateskills/{id}")
-   public ResponseEntity<Skills> updateskills(@PathVariable("id") int id,@RequestBody Skills skill)
+   public Skills updateskills(@PathVariable("id") int id,@RequestBody Skills skill)
    {
 	   Skills skill1=service.getskillsbyid(id);
 	   if(skill1==null)
 	   {
 		   throw new SkillNotFoundException("skill cannot be found");
 	   }
-	   return ResponseEntity.status(HttpStatus.ACCEPTED).body(service.updateskill(id,skill));
+	   return service.updateskill(id,skill);
    }
    @DeleteMapping("/deleteskills/{id}")
-   public ResponseEntity<String> deleteskills(@PathVariable("id") int id)
+   public String deleteskills(@PathVariable("id") int id)
    {
 	   Skills skill1=service.getskillsbyid(id);
 	   if(skill1==null)
 	   {
 		   throw new SkillNotFoundException("skill cannot be found");
 	   }
-	   return ResponseEntity.status(HttpStatus.ACCEPTED).body(service.deleteskills(id));
+	   return service.deleteskills(id);
    }
 }

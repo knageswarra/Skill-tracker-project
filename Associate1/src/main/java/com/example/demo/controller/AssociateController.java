@@ -55,44 +55,44 @@ public class AssociateController {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(sb);
 	}
 	@GetMapping("/getassociatebyid/{id}")
-	public ResponseEntity<Associate> getAssociateById(@PathVariable("id") int id)
+	public Associate getAssociateById(@PathVariable("id") int id)
 	{
 		Associate associate1=service.findassociatebyid(id);
 		if(associate1==null)
 		{
 			throw new AssociateNotFoundException("Associate cannot be found");
 		}
-		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
+		return associate1;
 	}
 	@PutMapping("/updateassociate/{id}")
-	public ResponseEntity<Associate> updateAssociate(@PathVariable("id") int id,@RequestBody Associate a)
+	public Associate updateAssociate(@PathVariable("id") int id,@RequestBody Associate a)
 	{
 		Associate associate1=service.updateassociate(id, a);
 		if(associate1==null)
 		{
 			throw new AssociateNotFoundException("Associate cannot be found");
 		}
-		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
+		return associate1;
 	}
 	@DeleteMapping("/deleteassociate/{id}")
-	public ResponseEntity<String> deleteAssociate(@PathVariable("id") int id)
+	public String deleteAssociate(@PathVariable("id") int id)
 	{
 		String s=service.deleteassociatebyid(id);
 		if(s==null)
 		{
 			throw new AssociateNotFoundException("Associate cannot be found");
 		}
-		return ResponseEntity.ok(s);
+		return s;
 	}
 	@GetMapping("/findassociatebycountry/{country}")
-	public ResponseEntity<Associate> getAssociateByCountry(@PathVariable("country") String country)
+	public Associate getAssociateByCountry(@PathVariable("country") String country)
 	{
 		Associate associate1=service.findbyassociatecountry(country);
 		if(associate1==null)
 		{
 			throw new AssociateNotFoundException("Associate cannot be found");
 		}
-		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
+		return associate1;
 	}
 	@GetMapping("/findassociatebyemail/{email}")
 	public ResponseEntity<Associate> getAssociateByEmail(@PathVariable("email") String email)
@@ -105,14 +105,14 @@ public class AssociateController {
 		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
 	}
 	@GetMapping("/findassociatebymobilenumber/{mobilenumber}")
-	public ResponseEntity<Associate> getAssociateByMobileNumber(@PathVariable("mobilenumber") String mobilenumber)
+	public Associate getAssociateByMobileNumber(@PathVariable("mobilenumber") String mobilenumber)
 	{
 		Associate associate1=service.FindByAssociatemobile(mobilenumber);
 		if(associate1==null)
 		{
 			throw new AssociateNotFoundException("Associate cannot be found");
 		}
-		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
+		return associate1;
 	}
 	@GetMapping("/findassociatebyskillname/{skillname}")
 	public ResponseEntity<List<Associate>> getAssociateBySkill(@PathVariable("skillname") String skillname)
