@@ -83,10 +83,10 @@ public class HRController {
 		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
 	}
 	@GetMapping("/findassociatebyskillname/{skillname}")
-	public ResponseEntity<List<Associate>> getAssociateBySkill(@PathVariable("skillname") String skillname)
+	public List<Associate> getAssociateBySkill(@PathVariable("skillname") String skillname)
 	{
 		List<Associate> associate1=associate.getAssociateBySkill(skillname);
-		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
+		return associate1;
 	}
 	@PostMapping("/create-hr")
 	public ResponseEntity<HR> createHr(@RequestBody HR hr1) {
