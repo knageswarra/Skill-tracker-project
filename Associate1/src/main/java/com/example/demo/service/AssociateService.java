@@ -15,5 +15,10 @@ List<Associate>findbyassociatecountry(String country);
 Associate FindByAssociateemail(String email);
 Associate FindByAssociatemobile(String mobile);
 List<Associate> FindByAssociateskillname(String skillname);
+Associate updateAssociateByFirstName(int id,String name);
+Associate updateAssociateByLastName(int id,String name);
+Associate updateAssociateByEmail(int id,String email);
+Associate updateAssociateBymobile(int id,String mobile);
+
 
 }

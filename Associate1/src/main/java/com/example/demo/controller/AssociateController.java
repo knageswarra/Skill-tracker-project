@@ -130,6 +130,29 @@ public class AssociateController {
 		}
 		return associate1;
 	}
-	
+	@PutMapping("/updatassociatebyfirstname/{id}/{name}")
+	public Associate updateassociatebyfirstname(@PathVariable("id") int id,@PathVariable("name") String name)
+	{
+		Associate a=service.updateAssociateByFirstName(id, name);
+		return a;
+	}
+	@PutMapping("/updatassociatebylastname/{id}/{name}")
+	public Associate updateassociatebylastname(@PathVariable("id") int id,@PathVariable("name") String name)
+	{
+		Associate a=service.updateAssociateByLastName(id, name);
+		return a;
+	}
+	@PutMapping("/updatassociatebyemail/{id}/{email}")
+	public Associate updateassociatebyemail(@PathVariable("id") int id,@PathVariable("email") String email)
+	{
+		Associate a=service.updateAssociateByEmail(id, email);
+		return a;
+	}
+	@PutMapping("/updatassociatebymobile/{id}/{mobile}")
+	public Associate updateassociatebymobile(@PathVariable("id") int id,@PathVariable("mobile") String mobile)
+	{
+		Associate a=service.updateAssociateBymobile(id, mobile);
+		return a;
+	}
 	
 }

@@ -101,6 +101,38 @@ public List<Associate> FindByAssociateskillname(String skillname) {
 	return skill.get(0).associate;
 }
 
+@Override
+public Associate updateAssociateByFirstName(int id, String name) {
+	Associate a=associaterepo.findById(id).get();
+	a.setAssociatefirstname(name);
+	associaterepo.save(a);
+	return a;
+}
+
+@Override
+public Associate updateAssociateByLastName(int id, String name) {
+	Associate a=associaterepo.findById(id).get();
+	a.setAssociatelastname(name);
+	associaterepo.save(a);
+	return a;
+}
+
+@Override
+public Associate updateAssociateByEmail(int id, String email) {
+	Associate a=associaterepo.findById(id).get();
+	a.setAssociateemail(email);
+	associaterepo.save(a);
+	return a;
+}
+
+@Override
+public Associate updateAssociateBymobile(int id, String mobile) {
+	Associate a=associaterepo.findById(id).get();
+	a.setAssociatemobilenumber(mobile);
+	associaterepo.save(a);
+	return a;
+}
+
 
 
   

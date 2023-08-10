@@ -106,4 +106,19 @@ public class SkillsController {
 	   Skills s=service.insertassociatedetails(id,associate);
 	   return s;
    }
+   @PutMapping("/updateskillname/{id}/{name}")
+   public Skills updateskillsname(@PathVariable("id") int id,@PathVariable("name") String name)
+   {
+	   return service.updateskillname(id, name);
+   }
+   @PutMapping("/updateskillstartdate/{id}/{date}")
+   public Skills updateskillsstartdate(@PathVariable("id") int id,@PathVariable("date") String date)
+   {
+	   return service.updatestartdate(id, date);
+   }
+   @PutMapping("/updateskillenddate/{id}/{date}")
+   public Skills updateskillsenddate(@PathVariable("id") int id,@PathVariable("date") String date)
+   {
+	   return service.updateenddate(id, date);
+   }
 }

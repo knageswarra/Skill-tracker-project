@@ -70,4 +70,28 @@ public class SkillServiceImpl implements SkillsService{
 		return s;
 	}
 
+	@Override
+	public Skills updateskillname(int id, String name) {
+		Skills s=repo.findById(id).get();
+		s.setSkillname(name);
+		repo.save(s);
+		return s;
+	}
+
+	@Override
+	public Skills updatestartdate(int id, String date) {
+		Skills s=repo.findById(id).get();
+		s.setStartdate(date);
+		repo.save(s);
+		return s;
+	}
+
+	@Override
+	public Skills updateenddate(int id, String date) {
+		Skills s=repo.findById(id).get();
+		s.setEnddate(date);
+		repo.save(s);
+		return s;
+	}
+
 }
