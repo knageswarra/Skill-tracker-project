@@ -14,6 +14,11 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class SkillServiceImpl implements SkillsService{
 	private final SkillRepository repo;
+	public SkillServiceImpl(SkillRepository repo) {
+		super();
+		this.repo = repo;
+	}
+
 	public Skills createskill(Skills skill) {
 		return repo.save(skill);
 	}

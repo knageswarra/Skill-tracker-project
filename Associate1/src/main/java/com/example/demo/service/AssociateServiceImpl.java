@@ -66,6 +66,12 @@ public List<Associate> findbyassociatecountry(String country) {
 	return associaterepo.FindByAssociatecountry(country);
 }
 
+public AssociateServiceImpl(SkillRepository skillrepo, AssociateRepository associaterepo) {
+	super();
+	this.skillrepo = skillrepo;
+	this.associaterepo = associaterepo;
+}
+
 @Override
 public Associate FindByAssociateemail(String email) {
 	// TODO Auto-generated method stub

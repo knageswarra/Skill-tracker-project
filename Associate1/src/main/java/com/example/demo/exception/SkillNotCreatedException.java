@@ -19,5 +19,26 @@ public class SkillNotCreatedException extends RuntimeException {
 		super();
 		this.message=message;
 	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public int getStatusCode() {
+		return statusCode;
+	}
+	public void setStatusCode(int statusCode) {
+		this.statusCode = statusCode;
+	}
+	public long getErrorReportringTime() {
+		return errorReportringTime;
+	}
+	public void setErrorReportringTime(long errorReportringTime) {
+		this.errorReportringTime = errorReportringTime;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 }

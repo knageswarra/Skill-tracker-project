@@ -27,6 +27,11 @@ import lombok.AllArgsConstructor;
 @RequestMapping("/associate")
 @AllArgsConstructor
 public class AssociateController {
+	public AssociateController(AssociateService service, Environment env) {
+		super();
+		this.service = service;
+		this.env = env;
+	}
 	private final AssociateService service;
 	private final Environment env;
 	@PostMapping("/createassociate")

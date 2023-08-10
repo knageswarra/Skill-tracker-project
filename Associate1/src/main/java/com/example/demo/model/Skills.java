@@ -40,4 +40,34 @@ public class Skills {
 	private String enddate;
 	@ManyToMany()
 	public List<Associate> associate;
+	public int getSkillid() {
+		return skillid;
+	}
+	public void setSkillid(int skillid) {
+		this.skillid = skillid;
+	}
+	public String getSkillname() {
+		return skillname;
+	}
+	public void setSkillname(String skillname) {
+		this.skillname = skillname;
+	}
+	public String getStartdate() {
+		return startdate;
+	}
+	public void setStartdate(String startdate) {
+		this.startdate = startdate;
+	}
+	public String getEnddate() {
+		return enddate;
+	}
+	public void setEnddate(String enddate) {
+		this.enddate = enddate;
+	}
+	public List<Associate> getAssociate() {
+		return associate;
+	}
+	public void setAssociate(List<Associate> associate) {
+		this.associate = associate;
+	}
 }

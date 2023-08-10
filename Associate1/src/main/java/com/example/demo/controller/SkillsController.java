@@ -27,6 +27,10 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class SkillsController {
 	private final SkillsService service;
+	public SkillsController(SkillsService service) {
+		super();
+		this.service = service;
+	}
 	@PostMapping("/createskills")
 	public Skills createskills(@RequestBody Skills skill)
 	{

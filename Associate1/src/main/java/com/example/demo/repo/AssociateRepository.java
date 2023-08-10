@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.example.demo.model.Associate;
 
 public interface AssociateRepository extends JpaRepository<Associate,Integer>{
-	@Query("SELECT * FROM Associate u WHERE u.associatecountry = ?1")
+	@Query("SELECT u FROM Associate u WHERE u.associatecountry = ?1")
 	List<Associate> FindByAssociatecountry(String country);
 	@Query("SELECT u FROM Associate u WHERE u.associateemail = ?1")
 	Associate FindByAssociateemail(String email);
