@@ -138,6 +138,40 @@ public class HRController {
 	{
 		return associate.insertassociatedetails(id, associate1);
 	}
-	
-
+	@PutMapping("/updatassociatebyfirstname/{id}/{name}")
+	public Associate updateassociatebyfirstname(@PathVariable("id") int id,@PathVariable("name") String name)
+	{
+		return associate.updateassociatebyfirstname(id, name);
+	}
+   @PutMapping("/updatassociatebylastname/{id}/{name}")
+    public Associate updateassociatebylastname(@PathVariable("id") int id,@PathVariable("name") String name)
+   {
+	   return associate.updateassociatebylastname(id,name);
+   }
+   @PutMapping("/updatassociatebyemail/{id}/{email}")
+	public Associate updateassociatebyemail(@PathVariable("id") int id,@PathVariable("email") String email)
+	{
+	   return associate.updateassociatebyemail(id, email);
+	}
+   @PutMapping("/updatassociatebymobile/{id}/{mobile}")
+	public Associate updateassociatebymobile(@PathVariable("id") int id,@PathVariable("mobile") String mobile)
+	{
+	   return associate.updateassociatebymobile(id, mobile);
+	}
+   @PutMapping("/skills/updateskillname/{id}/{name}")
+   public Skills updateskillsname(@PathVariable("id") int id,@PathVariable("name") String name)
+   {
+	   return associate.updateskillsname(id, name);
+   }
+  @PutMapping("/skills/updateskillstartdate/{id}/{date}")
+   public Skills updateskillsstartdate(@PathVariable("id") int id,@PathVariable("date") String date)
+   {
+	  return associate.updateskillsstartdate(id, date);
+   }
+  
+  @PutMapping("/skills/updateskillenddate/{id}/{date}")
+  public Skills updateskillsenddate(@PathVariable("id") int id,@PathVariable("date") String date)
+  {
+	  return associate.updateskillsenddate(id, date);
+  }
 }
