@@ -23,12 +23,20 @@ import com.example.demo.entity.Skills;
 
 import lombok.AllArgsConstructor;
 
+
+
 @RestController
 @RequestMapping("/hr")
 @AllArgsConstructor
 public class HRController {
 	private final FeignClientAssociate associate;
 	private final FeignClientHR hr;
+	
+	public HRController(FeignClientAssociate associate, FeignClientHR hr) {
+		super();
+		this.associate = associate;
+		this.hr = hr;
+	}
 	@PostMapping("/createassociate")
 	public ResponseEntity<Associate> createAssociate(@RequestBody Associate ass)
 	{
