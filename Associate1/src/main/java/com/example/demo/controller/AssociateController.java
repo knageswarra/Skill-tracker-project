@@ -121,14 +121,14 @@ public class AssociateController {
 		return associate1;
 	}
 	@GetMapping("/findassociatebyskillname/{skillname}")
-	public ResponseEntity<List<Associate>> getAssociateBySkill(@PathVariable("skillname") String skillname)
+	public List<Associate> getAssociateBySkill(@PathVariable("skillname") String skillname)
 	{
 		List<Associate> associate1=service.FindByAssociateskillname(skillname);
 		if(associate1==null)
 		{
 			throw new AssociateNotFoundException("Associate cannot be found");
 		}
-		return ResponseEntity.status(HttpStatus.FOUND).body(associate1);
+		return associate1;
 	}
 	
 	

@@ -87,18 +87,18 @@ public Associate FindByAssociatemobile(String mobile) {
 @Override
 public List<Associate> FindByAssociateskillname(String skillname) {
 	List<Skills> skill=skillrepo.FindBySkillName(skillname);
-	List<Integer> associateid=new ArrayList<>();
-	List<Associate> associates=new ArrayList<Associate>();
-	for(int i=0;i<skill.size();i++)
-	{
+	/*//List<Integer> associateid=new ArrayList<>();
+	//List<Associate> associates=new ArrayList<Associate>();
+	//for(int i=0;i<skill.size();i++)
+	{   
 		associateid.add(skill.get(i).getSkillid());
 	}
 	for(int i=0;i<associateid.size();i++)
 	{
 		Associate ass1=associaterepo.findById(associateid.get(i)).get();
 		associates.add(ass1);
-	}
-	return associates;
+	}*/
+	return skill.get(0).associate;
 }
 
 
