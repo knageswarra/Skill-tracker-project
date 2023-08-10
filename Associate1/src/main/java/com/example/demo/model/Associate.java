@@ -97,5 +97,22 @@ public String getPassword() {
 public void setPassword(String password) {
 	this.password = password;
 }
+public Associate(int associateid, String associatefirstname, String associatelastname, String gender, Date dob,
+		String associateemail, String associatecountry, String associatemobilenumber, String password) {
+	super();
+	this.associateid = associateid;
+	this.associatefirstname = associatefirstname;
+	this.associatelastname = associatelastname;
+	this.gender = gender;
+	this.dob = dob;
+	this.associateemail = associateemail;
+	this.associatecountry = associatecountry;
+	this.associatemobilenumber = associatemobilenumber;
+	this.password = password;
+}
+public Associate() {
+	super();
+	// TODO Auto-generated constructor stub
+}
 
 }

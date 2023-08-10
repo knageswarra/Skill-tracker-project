@@ -52,6 +52,10 @@ public class Skills {
 	public void setSkillname(String skillname) {
 		this.skillname = skillname;
 	}
+	public Skills() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public String getStartdate() {
 		return startdate;
 	}
@@ -68,6 +72,14 @@ public class Skills {
 		return associate;
 	}
 	public void setAssociate(List<Associate> associate) {
+		this.associate = associate;
+	}
+	public Skills(int skillid, String skillname, String startdate, String enddate, List<Associate> associate) {
+		super();
+		this.skillid = skillid;
+		this.skillname = skillname;
+		this.startdate = startdate;
+		this.enddate = enddate;
 		this.associate = associate;
 	}
 }
