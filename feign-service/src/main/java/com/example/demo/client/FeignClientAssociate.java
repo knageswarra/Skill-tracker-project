@@ -45,7 +45,7 @@ public interface FeignClientAssociate
 	public String deleteSkillsDto(@PathVariable("id") int id);
 	@PutMapping("/skills/updateskills/{id}")
 	public Skills updateSkillsDto(@PathVariable("id") int id,@RequestBody Skills skill);
-	@PostMapping("/insertassociatedetails/{id}")
+	@PostMapping("/skills/insertassociatedetails/{id}")
 	public Skills insertassociatedetails(@PathVariable("id") int id,@RequestBody Associate associate);
 	
 }
