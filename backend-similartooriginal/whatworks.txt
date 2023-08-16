@@ -1,0 +1,4 @@
+mappings -yes
+eureka - no
+feign - maybe
+swagger - yes
