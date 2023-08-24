@@ -17,7 +17,7 @@ export class LoginComponent {
   login(): void {
     this.authService.login(this.email, this.password).subscribe(
       (response: any) => {
-        console.log('Login response:', response); // Log the full response
+        console.log('Login response:', response);
         if (response.id) {
           this.router.navigate(['/loginsuccess']);
         } else {

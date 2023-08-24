@@ -1,21 +1,29 @@
+/* Add styles for the Associates table */
 table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  
-  th,
-  td {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-  }
-  
-  th {
-    text-align: left;
-    background-color: #f5f5f5;
-  }
-  
-  tr:nth-of-type(even) {
-    background-color: #f9f9f9;
-  }
-  
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1.5rem; /* Increased margin for better spacing */
+}
+
+th,
+td {
+  padding: 0.75rem; /* Increased padding for better spacing */
+  border: 1px solid #ccc;
+  text-align: center; /* Center-align table cells */
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: bold; /* Bold text for table headers */
+  color: #333;
+}
+
+tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+/* Add hover effect to table rows */
+tr:hover {
+  background-color: #e6e6e6;
+  transition: background-color 0.2s;
+}

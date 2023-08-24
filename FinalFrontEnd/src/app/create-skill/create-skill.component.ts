@@ -39,9 +39,12 @@ export class CreateSkillComponent implements OnInit {
         response => {
           console.log('Skill created:', response);
           
+          
+           
         },
         error => {
           console.error('Error creating skill:', error);
+          
           
           this.isSubmitting = false;
         }

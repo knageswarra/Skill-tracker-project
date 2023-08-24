@@ -2,65 +2,70 @@
 
 // Global styles
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  // Login container styles
-  div {
-    padding: 20px;
-    background-color: #d8c6c6;
-  }
-  
-  h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  p {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #555;
-  }
-  
-  ul {
-    list-style-type: disc; /* Use "disc" for bulleted list */
-    padding-left: 20px;    /* Add left padding to the list */
-  }
-  
-  li {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  a:hover {
-    color: #0056b3;
-  }
-  
-  // Button styles
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+// Login container styles
+.associate-main-page {
+  padding: 40px;
+  background-color: #f8e8e8;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Button styles */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}

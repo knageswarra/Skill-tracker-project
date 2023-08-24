@@ -10,7 +10,6 @@ import { HrService } from '../hr.service';
 export class HrFormComponent implements OnInit {
   hr: any = {};
   id!: number;
-  successMessage: string = '';
 
   constructor(
     private hrService: HrService,
@@ -39,7 +38,6 @@ export class HrFormComponent implements OnInit {
       });
     } else {
       this.hrService.createHR(this.hr).subscribe(() => {
-        this.successMessage = 'HR creation successful';
         this.router.navigate(['/hr-list']);
       });
     }

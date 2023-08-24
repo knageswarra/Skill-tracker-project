@@ -10,7 +10,6 @@ import { HrService } from '../hr.service';
 export class HrDetailsComponent implements OnInit {
   hr: any;
   id!: number;
-  deletionMessage: string = '';
 
   constructor(
     private hrService: HrService,
@@ -36,7 +35,6 @@ export class HrDetailsComponent implements OnInit {
   deleteHR() {
     this.hrService.deleteHR(this.id).subscribe(
       () => {
-        this.deletionMessage = 'HR deletion successful';
         this.router.navigate(['/hr-list']);
       },
       (error) => {

@@ -1,9 +1,4 @@
 <h2>HR Form</h2>
-
-<div *ngIf="successMessage" class="success-message">
-  {{ successMessage }}
-</div>
-
 <form (ngSubmit)="saveHR()">
   <label>Email:</label>
   <input type="text" [(ngModel)]="hr.userEmail" name="userEmail" required>

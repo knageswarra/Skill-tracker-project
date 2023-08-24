@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AssociateService } from '../associate.service'; // Import the service
+import { AssociateService } from '../associate.service'; 
 import { ViewEncapsulation } from '@angular/core';
 
 @Component({

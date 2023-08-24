@@ -10,7 +10,7 @@ export class AssociateDetailsComponent {
   associateId!: number;
   associateLastName!: string;
   associateData: any;
-  searchResults: any[] = []; // Store search results here
+  searchResults: any[] = []; 
 
   constructor(private associateService: AssociateService) {}
 
@@ -23,7 +23,7 @@ export class AssociateDetailsComponent {
   }
 
   searchByLastName() {
-    // Fetch associates by last name
+    
     this.associateService.getAssociatesByLastName(this.associateLastName)
       .subscribe((data: any[]) => {
         this.searchResults = data;

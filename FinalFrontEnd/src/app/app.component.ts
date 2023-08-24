@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Skill Tracker System';
-  year = new Date().getFullYear(); // Add this line to set the current year
+  year = new Date().getFullYear();
 }

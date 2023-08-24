@@ -1,6 +1,11 @@
-<h2>HR List</h2>
-<ul>
-  <li *ngFor="let hr of hrList" (click)="navigateToDetails(hr.id)">
-    ID:{{hr.id}} |  Email:{{ hr.userEmail }}
-  </li>
-</ul>
+<div class="hr-list-container">
+  <h2>HR List</h2>
+  <ul class="hr-list">
+    <li *ngFor="let hr of hrList" class="hr-item" (click)="navigateToDetails(hr.id)">
+      <div class="details">
+        <span class="id">ID: {{ hr.id }}</span>
+        <span class="email">Email: {{ hr.userEmail }}</span>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,66 +1,64 @@
-/* styles.scss */
+// Define variables for reusable colors
+$primary-color: #007bff;
+$secondary-color: #0056b3;
+$text-color: #333;
+$background-color: #f4f4f4;
+$container-background: #ffffff;
+$heading-color: #1e344e;
 
 // Global styles
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+// Center container
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+// Stylish container
+.stylish-container {
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: $container-background;
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: $heading-color;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around; // Distribute buttons evenly
+  margin-top: 20px; // Add spacing between heading and buttons
+}
+
+.button {
+  padding: 20px 40px; // Increased padding for a button look
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background-color: $secondary-color;
+    transform: scale(1.05);
   }
-  
-  // Login container styles
-  div {
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
-  
-  h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  p {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #555;
-  }
-  
-  ul {
-    list-style-type: disc; /* Use "disc" for bulleted list */
-    padding-left: 20px;    /* Add left padding to the list */
-  }
-  
-  li {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  a:hover {
-    color: #0056b3;
-  }
-  
-  // Button styles
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
+}

@@ -2,7 +2,7 @@
 
 // Global styles
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
@@ -12,16 +12,16 @@ body {
 .login-container {
   max-width: 400px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #e3d8d8;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 15px;
-  color: #333;
+  color: #1e344e;
 }
 
 form {
@@ -30,28 +30,34 @@ form {
 }
 
 label {
-  font-size: 16px;
-  margin-bottom: 5px;
-  color: #555;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 15px;
+  padding: 12px;
+  border: 2px solid #dfe4ea;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  
+  &:focus {
+    border-color: #007bff;
+  }
 }
 
 button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 6px;
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s;
-
+  
   &:hover {
     background-color: #0056b3;
   }

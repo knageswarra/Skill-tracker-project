@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class AssociateService {
   [x: string]: any;
 
-  private baseUrl = 'http://localhost:8088/api'; // Update with your backend URL
+  private baseUrl = 'http://localhost:8088/api'; 
 
   constructor(private http: HttpClient) { }
 

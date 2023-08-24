@@ -8,6 +8,7 @@ import { SkillsService } from '../skills.service';
 })
 export class AssociateSkillsListComponent implements OnInit {
   associateSkills: any[] = []; 
+
   constructor(private skillsService: SkillsService) { }
 
   ngOnInit(): void {

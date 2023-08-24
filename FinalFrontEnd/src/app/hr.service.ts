@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HrService {
-  private baseUrl = 'http://localhost:8277/api'; // Adjust with your backend URL
+  private baseUrl = 'http://localhost:8277/api'; 
 
   constructor(private http: HttpClient) { }
 

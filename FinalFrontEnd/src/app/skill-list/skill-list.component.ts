@@ -18,7 +18,7 @@ export class SkillListComponent implements OnInit {
   loadSkills(): void {
     this.skillsService.getAllSkills().subscribe(
       (response: any) => {
-        this.skills = response; // Assuming the API returns an array of skills
+        this.skills = response;
       },
       error => {
         console.error('Error loading skills:', error);

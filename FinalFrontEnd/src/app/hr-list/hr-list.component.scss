@@ -8,33 +8,41 @@ body {
   background-color: #f4f4f4;
 }
 
-// HR List styles
-h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
+// HR List container styles
+.hr-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-ul {
+// HR List styles
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1e344e;
+}
+
+.hr-list {
   list-style: none;
   padding: 0;
 }
 
-li {
+.hr-item {
   display: flex;
   align-items: center;
   padding: 15px;
   border: 1px solid #ccc;
-  background-color: #fff;
+  background-color: #ffffff;
   margin-bottom: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-li:hover {
-  background-color: #6a6363;
+.hr-item:hover {
+  background-color: #f4f7fa;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .details {
@@ -51,10 +59,10 @@ li:hover {
 .email {
   color: #555;
   font-size: 16px;
-  opacity: 0.7; /* Reduced opacity for better distinction */
+  opacity: 0.8;
 }
 
-// Button styles (if needed)
+// Button styles
 button {
   padding: 10px 20px;
   background-color: #007bff;

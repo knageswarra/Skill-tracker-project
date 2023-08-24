@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'associate', component: AssociateComponent },
   { path: 'associates', component: AssociateListComponent },
-  { path: '', redirectTo: '/associate-main', pathMatch: 'full' }, // Redirect to the main associate page
+  { path: '', redirectTo: '/associate-main', pathMatch: 'full' },
   { path: 'associate-main', component: AssociateMainPageComponent },
   { path: 'loginsuccess', component: LoginsuccessComponent},
   { path: 'delete', component: DeleteAssociateComponent },
